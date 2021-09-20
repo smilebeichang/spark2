@@ -1,12 +1,13 @@
-package cn.sysu.sql
+package cn.sysu.Stream
 
+import cn.sysu.sql.Test
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
  * Created by Smexy on 2021/7/2
  */
-class StreamingContextTest {
+class SparkStream_Context {
 
 
   /*

@@ -7,7 +7,7 @@ import org.junit._
 /**
  * Created by Smexy on 2021/7/2
  */
-class StreamingContextTest {
+class SparkStream_Context {
 
 
   /*

@@ -1,4 +1,4 @@
-package cn.sysu.sql
+package cn.sysu.Stream
 
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}

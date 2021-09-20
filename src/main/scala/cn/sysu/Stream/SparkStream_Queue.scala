@@ -1,4 +1,4 @@
-package cn.sysu.sql
+package cn.sysu.Stream
 
 import org.apache.spark.SparkConf
 import org.apache.spark.rdd.RDD
@@ -10,7 +10,7 @@ import scala.collection.mutable
   * @Author : song bei chang
   * @create 2021/7/2 11:36
   */
-class RDDStream {
+class SparkStream_Queue {
 
   // object @Test无法直接使用
   // Test class should have exactly one public constructor
