@@ -5,9 +5,9 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * @Author : song bei chang
-  * @create 2021/5/31 15:52
+  * @create 2021/9/20 20:43
   */
-object action06_takeOrdered {
+object action04_countByKey {
 
   def main(args: Array[String]): Unit = {
 
@@ -19,14 +19,15 @@ object action06_takeOrdered {
 
     //3具体业务逻辑
     //3.1 创建第一个RDD
-    val rdd: RDD[Int] = sc.makeRDD(List(1,3,2,4))
+    val rdd: RDD[(Int, String)] = sc.makeRDD(List((1, "a"), (1, "a"), (1, "a"), (2, "b"), (3, "c"), (3, "c")))
 
-    //3.2 返回RDD中排完序后的前两个元素  1,2
-    val result: Array[Int] = rdd.takeOrdered(2)
-    println(result.mkString(","))
+    //3.2 统计每种key的个数 Map(1 -> 3, 2 -> 1, 3 -> 2)
+    val result: collection.Map[Int, Long] = rdd.countByKey()
+    println(result)
 
     //4.关闭连接
     sc.stop()
   }
+
 
 }
