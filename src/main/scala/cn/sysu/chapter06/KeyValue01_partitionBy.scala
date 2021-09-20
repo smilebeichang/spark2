@@ -21,7 +21,7 @@ object KeyValue01_partitionBy {
     //3.1 创建第一个RDD
     val rdd: RDD[(Int, String)] = sc.makeRDD(Array((1,"aaa"),(2,"bbb"),(3,"ccc")),3)
 
-    //3.2 对RDD重新分区
+    //3.2 对RDD重新分区 new  HashPartitioner
     val rdd2: RDD[(Int, String)] = rdd.partitionBy(new org.apache.spark.HashPartitioner(2))
 
     //3.3 打印查看对应分区数据  (0,(2,bbb))  (1,(1,aaa))  (1,(3,ccc))

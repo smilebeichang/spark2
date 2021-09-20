@@ -19,7 +19,7 @@ object KeyValue03_groupByKey {
 
     //3具体业务逻辑
     //3.1 创建第一个RDD
-    val rdd = sc.makeRDD(List(("a",1),("b",5),("a",5),("b",2)))
+    val rdd: RDD[(String, Int)] = sc.makeRDD(List(("a",1),("b",5),("a",5),("b",2)))
 
     //3.2 将相同key对应值聚合到一个Seq中
     val group: RDD[(String, Iterable[Int])] = rdd.groupByKey()
@@ -27,6 +27,7 @@ object KeyValue03_groupByKey {
     //3.3 打印结果
     group.collect().foreach(println)
 
+    println("*"*100)
     //3.4 计算相同key对应值的相加结果
     group.map(t=>(t._1,t._2.sum)).collect().foreach(println)
 

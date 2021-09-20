@@ -30,12 +30,19 @@ object value08_sample {
     // 第三个参数：随机数种子
     val dataRDD1 = dataRDD.sample(false, 0.5)
 
+    dataRDD1.collect().foreach(println)
 
+    println("*"*100)
     // 抽取数据放回（泊松算法）
     // 第一个参数：抽取的数据是否放回，true：放回；false：不放回
     // 第二个参数：重复数据的几率，范围大于等于0.表示每一个元素被期望抽取到的次数
     // 第三个参数：随机数种子,所以种子需要真随机
     val dataRDD2 = dataRDD.sample(true, 2)
+
+    dataRDD2.collect().foreach(println)
+
+    sc.stop()
+
   }
 
 }

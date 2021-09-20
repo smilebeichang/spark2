@@ -36,6 +36,8 @@ object value11_coalesce {
     )
 
     //6 打印数据
+    // (0,1) (0,2)
+    // (1,3) (1,4) (1,5) (1,6)
     indexRDD.collect().foreach(println)
 
     //8 延迟一段时间，观察http://localhost:4040页面，查看Shuffle读写时间

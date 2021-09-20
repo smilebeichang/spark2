@@ -27,6 +27,8 @@ object DoubleValue03_subtract {
     //3.3 计算第一个RDD与第二个RDD的差集并打印
     rdd.subtract(rdd1).collect().foreach(println)
 
+    Thread.sleep(100000)
+
     //4.关闭连接
     sc.stop()
   }

@@ -24,16 +24,19 @@ object value13_sortBy {
     // 3.2 默认是升序排
     val sortRdd: RDD[Int] = rdd.sortBy(num => num)
     sortRdd.collect().foreach(println)
+    println("*"*100)
 
     // 3.3 配置为倒序排
     val sortRdd2: RDD[Int] = rdd.sortBy(num => num, false)
     sortRdd2.collect().foreach(println)
+    println("*"*100)
 
     // 3.4 创建一个RDD
     val strRdd: RDD[String] = sc.makeRDD(List("1", "22", "12", "2", "3"))
 
     // 3.5 按照字符的int值排序
     strRdd.sortBy(num => num.toInt).collect().foreach(println)
+    println("*"*100)
 
     // 3.5 创建一个RDD
     val rdd3: RDD[(Int, Int)] = sc.makeRDD(List((2, 1), (1, 2), (1, 1), (2, 2)))

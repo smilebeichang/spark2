@@ -23,12 +23,15 @@ object value05_glom {
 
     // 3.2 求出每个分区的最大值  0->1,2   1->3,4
     val maxRdd: RDD[Int] = rdd.glom().map(_.max)
+    // 此时 value 和 maxRdd 是并行的
     val value: RDD[Array[Int]] = rdd.glom()
 
     // 3.3 求出所有分区的最大值的和 2 + 4
     println(maxRdd.collect().sum)
+
     println("*"*100)
     value.collect().foreach(x=>println(x.toList))
+
     println("*"*100)
     println(value.collect().toList)
 

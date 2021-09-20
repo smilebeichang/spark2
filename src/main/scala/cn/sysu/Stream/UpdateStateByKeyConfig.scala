@@ -7,7 +7,7 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
   * @Author : song bei chang
   * @create 2021/5/4 12:41
   */
-object UpdateStateByKey {
+object UpdateStateByKeyConfig {
 
 
   def main(args: Array[String]) {

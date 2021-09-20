@@ -24,6 +24,8 @@ object value06_groupby {
     // 3.2 将每个分区的数据放到一个数组并收集到Driver端打印
     rdd.groupBy(_ % 2).collect().foreach(println)
 
+    println("*"*100)
+
     // 3.3 创建一个RDD
     val rdd1: RDD[String] = sc.makeRDD(List("hello","hive","hadoop","spark","scala"))
 

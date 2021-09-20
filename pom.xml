@@ -79,6 +79,18 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- Compression codec com.hadoop.compression.lzo.LzoCodec not found. -->
+        <dependency>
+            <groupId>com.hadoop.compression</groupId>
+            <artifactId>com.hadoop.compression</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/hadoop-lzo-0.4.20.jar</systemPath>
+        </dependency>
+
+
+
+
     </dependencies>
 
     <build>
