@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="cn.edu.sysu.gmall_publisher.mapper.EmployeeMapper">
+
+    <select id="getEmployeeById" resultType="cn.edu.sysu.bean.Employee">
+      select id,last_name lastName,gender,email from tbl_employee where id=#{id}
+    </select>
+
+
+    <delete id="deleteEmployeeById"  parameterType="java.lang.Integer"   >
+        <![CDATA[delete  from tbl_employee where id = #{id}  ]]>
+    </delete>
+
+    <update id="updateEmployee" >
+        update tbl_employee set last_name = #{lastName},gender = #{gender},email = #{email} where id = #{id}
+    </update>
+
+    <insert id="insertEmployee" >
+        insert into tbl_employee (`last_name`,`gender`,`email`) values (#{lastName},#{gender},#{email})
+    </insert>
+
+
+    <select id="getAllEmployee" resultType="cn.edu.sysu.bean.Employee">
+      select id,last_name lastName,gender,email from tbl_employee
+    </select>
+
+</mapper>

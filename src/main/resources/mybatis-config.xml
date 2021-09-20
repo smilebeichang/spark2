@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- environmets标签里可以配置多个environment标签 -->
+    <environments default="development">
+        <!-- 一个environmet就代表一个数据库运行环境 -->
+        <environment id="development">
+            <!-- transactionManager：事务管理器 -->
+            <transactionManager type="JDBC" />
+            <!--dataSource：数据源，需要配置用户名，密码，驱动，连接 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://ecs2:3306/hive?useSSL=false" />
+                <property name="username" value="root" />
+                <property name="password" value="sbc006688" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+
+        <mapper resource="EmployeeMapper.xml"/>
+
+        <!-- 注册接口类型 -->
+        <mapper class="cn.edu.sysu.bean.Employee"/>
+    </mappers>
+</configuration>

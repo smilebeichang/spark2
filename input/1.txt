@@ -1,0 +1,4 @@
+xiao pang
+xiao shuai
+xiao bao
+E:\BaiduNetdiskDownload\02-hadhoop\01-Maven\Spark\input\1.txt
