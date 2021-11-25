@@ -1,6 +1,6 @@
 package cn.sysu.Stream
 
-import cn.sysu.sql.Test
+import cn.sysu.table_sql.Test
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.{SparkConf, SparkContext}
 

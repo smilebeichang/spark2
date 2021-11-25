@@ -1,4 +1,4 @@
-package cn.sysu.sql;
+package cn.sysu.table_sql;
 
 import cn.edu.sysu.bean.Employee;
 import cn.edu.sysu.gmall_publisher.mapper.EmployeeMapper;

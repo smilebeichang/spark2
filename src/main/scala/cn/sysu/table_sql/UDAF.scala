@@ -1,4 +1,4 @@
-package cn.sysu.sql
+package cn.sysu.table_sql
 
 import org.apache.spark.sql._
 import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedAggregateFunction}
